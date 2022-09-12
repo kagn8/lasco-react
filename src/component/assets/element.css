@@ -1,0 +1,38 @@
+.element{
+    height: 770px;
+}
+.libreria-sfondo{
+    /* background-image: url(https://www.ikea.com/it/it/images/products/billy-libreria-bianco__0625599_pe692385_s5.jpg?f=s); */
+    width: 100%;
+    height: 354.5px;
+    background-size: contain;
+    transition: background 0.5s;
+
+}
+.libreria-sfondo:hover{
+    background-image: url("https://www.ikea.com/it/it/images/products/billy-libreria-bianco__1051924_pe845813_s5.jpg?f=xxs") !important;
+    transition: background 0.5s;
+}
+.iconcine{
+    height: 50px;
+    width: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    border-radius: 100%;
+    border: 1px solid orange;
+    margin: 5px;
+}
+.variant{
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+}
+.varianti-p{
+    font-size: 0.7rem;
+    color: rgb(134, 134, 134);
+}
+a{
+    text-decoration: none;
+    color: black;
+}

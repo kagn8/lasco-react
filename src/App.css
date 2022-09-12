@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+.app{
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* HEADER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.header{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  max-width: 1500px;
+  height: 90px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 25px;
+  
+}
+.header span{
+  cursor: pointer;
+  border-radius: 800px;
+  padding: 5px;
+  font-weight: bold;
+}
+.header span i{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.bi-heart-fill{
+  color: red;
+}
+
+.header span:hover{
+  background-color: rgb(245, 245, 245);
+  border-radius: 800px;
+  padding: 5px;
+}
+
+.logo{
+  width: 90px;
+  height: 36px;
+  background-image: url("img/ikea-logo.f7d9229f806b59ec64cb.svg");
+  background-size: cover;
+}
+
+.search{
+  background-color: rgb(245, 245, 245);
+  height: 54px;
+  max-width: 900px;
+  width: 100%;
+  
+  border-radius: 800px;
+  border: none;
+  padding-left: 50px;
+  
+}
+.user{
+  height: 44px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+}
+.black-top{
+  height: 50px;
+  background-color: black;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.black-top p{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.prodotti-ambienti-offerte{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black;
+  border-bottom: 0.2px inset rgb(72, 72, 72);
+  
+}
+.prodotti-ambienti-offerte p{
+ margin-right: 10px;
+ font-weight: bolder;
+ font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
