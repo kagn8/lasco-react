@@ -27,7 +27,7 @@ function Header() {
         }, []);
 
   return (
-    <div>
+    <div className='main-header'>
       <div className='black-top '>
         <p><i class="bi bi-bookmark"></i>Scopri tanti nuovi prodotti in sconto</p>
         <p><i class="bi bi-pencil"></i>Consegna a casa a partire da 5 euro</p>
@@ -53,6 +53,25 @@ function Header() {
         
        
     </nav>
+
+    
+    <div className="prodotti-ambienti-offerte ">
+        <div className="prodotti d-flex">
+          <p> Prodotti </p>
+          <p> Ambienti </p>
+          <p> Offerte </p>
+        </div>
+        <div className="offerta d-flex">
+          <p><i class="bi bi-car-front"></i> 81025</p>
+          <p><i class="bi bi-building"></i>Napoli Afragola</p>
+        </div>
+      </div>
+      <div className="servizi">
+        <p>Prodotti &gt; Organizzare e contenere &gt; Librerie e scaffali &gt; Librerie</p>
+      </div>
+      
+
+        
     
     </div>
   );

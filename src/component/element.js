@@ -39,7 +39,7 @@ function Element({id, titolo, img, prezzo, descrizione, disponibile}) {
         <div className="libreria-sfondo" ref={ref} style={{backgroundImage:`url(${img})`}} ></div>
         
         <div>
-            <Link to={`/element/${id}`}><h4>{titolo}</h4></Link>
+            <Link to={`/element/${id}`} ><h4>{titolo}</h4></Link>
             <p>{descrizione}</p>
             <h3>{prezzo}</h3>
             <div className="d-flex">

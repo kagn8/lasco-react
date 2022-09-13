@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Header from './component/header';
 import Home from './component/home';
 import Prodotto from './component/prodotto';
+import Abs from './component/abs';
 // import Element from './component/element';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
     <div className="app">
 
     <Header />
+    <Abs />
+
 
     
     {/* <Home /> */}

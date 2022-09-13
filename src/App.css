@@ -1,11 +1,16 @@
 .app{
+  /* max-width: 1500px; */
+  margin: 0 auto;
+  /* margin-top: 50px; */
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.main-header{
   max-width: 1500px;
   margin: 0 auto;
   margin-top: 50px;
 }
-
-/* HEADER */
-
 .header{
 
   max-width: 1500px;
@@ -16,6 +21,7 @@
   flex-wrap: nowrap;
   align-items: center;
   margin-top: 25px;
+  
   
 }
 .header span{
@@ -87,5 +93,48 @@
  margin-right: 10px;
  font-weight: bolder;
  font-size: 1rem;
+}
+
+.abs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  margin-left: 50px;
+  width: 100px;
+  
+}
+.abs i{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: black;
+}
+.abs p{
+    
+    font-size: 1rem;
+}
+.abs i:hover{
+    background-color: rgb(245, 245, 245);
+    border-radius: 800px;
+}
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 61, 61);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(5, 5, 5);
 }
 
