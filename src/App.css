@@ -1,8 +1,7 @@
 .app{
-  /* max-width: 1500px; */
   margin: 0 auto;
-  /* margin-top: 50px; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  
 }
 
 /* HEADER */
@@ -102,7 +101,7 @@
   flex-direction: column;
   position: fixed;
   top: 70px;
-  margin-left: 50px;
+  left: 50px;
   width: 100px;
   
 }

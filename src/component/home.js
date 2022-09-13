@@ -6,8 +6,10 @@ import LibrerieDB from "./librerie";
 
 
 function Home() {
+  document.title= "Librerie - IKEA IT"
   return (
     
+
     <div className="home">
    
     

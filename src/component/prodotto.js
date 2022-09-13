@@ -5,8 +5,12 @@ import LibrerieDB from "./librerie";
 import { useRef, useEffect, useState } from "react";
 
 function Prodotto() {
+
+
   let id = window.location.pathname.replace("/element/", "");
-  let libreria = LibrerieDB.filter((l) => l.id == id)[0];
+  let libreria = LibrerieDB.filter((l) => l.id === Number(id))[0];
+
+  document.title = libreria.nome + " " + libreria.descrizione;
 
   const [colore, setColore] = useState(null);
   useState(() => {
@@ -76,15 +80,33 @@ function Prodotto() {
                 className="col-6 img-set"
                 style={{ backgroundImage: `url(${libreria.img})` }}
               ></div>
+               <div className="row bord-el" id="carousel">
+        {LibrerieDB.map((l) => {
+          return (
+            <div className="el" onClick={() => window.location.reload()}>
+              <Element
+                id={l.id}
+                titolo={l.nome}
+                img={l.img}
+                prezzo={l.prezzo}
+                descrizione={l.descrizione}
+                disponibile={l.disponibile}
+              />
+            </div>
+          );
+        })}
+      </div>
+
             </div>
           </div>
         </div>
 
         
+        
         <div className="dettagli" >
-          
+          <div className="d-flex justify-content-between">
             <h3>{libreria.nome}</h3> <h3>{libreria.prezzo}</h3>
-          
+          </div>
           <p>{libreria.descrizione}</p>
           <p className="d-flex">
             <i className="bi bi-star-fill"></i>
@@ -118,12 +140,12 @@ function Prodotto() {
 
           <div className="dettagli-consegna">
             <div className="diponibilita d-flex">
-              <i class="bi bi-car-front me-4"></i>
+              <i className="bi bi-car-front me-4"></i>
               <div className="altro">
                 <p className="colore">
                   Consegna{" "}
                   <i
-                    class="bi bi-circle-fill ms-3"
+                    className="bi bi-circle-fill ms-3"
                     style={{ color: colore }}
                   ></i>
                 </p>
@@ -134,12 +156,12 @@ function Prodotto() {
             <div className="riga mt-3 mb-3"></div>
 
             <div className="diponibilita d-flex">
-              <i class="bi bi-building me-4"></i>
+              <i className="bi bi-building me-4"></i>
               <div className="altro">
                 <p className="colore">
                   Clicca e Ritira
                   <i
-                    class="bi bi-circle-fill ms-3"
+                    className="bi bi-circle-fill ms-3"
                     style={{ color: colore }}
                   ></i>
                 </p>
@@ -150,12 +172,12 @@ function Prodotto() {
             <div className="riga mt-3 mb-3"></div>
 
             <div className="diponibilita d-flex">
-              <i class="bi bi-house-door me-4"></i>
+              <i className="bi bi-house-door me-4"></i>
               <div className="altro">
                 <p className="colore">
                   In negozio{" "}
                   <i
-                    class="bi bi-circle-fill ms-3"
+                    className="bi bi-circle-fill ms-3"
                     style={{ color: colore }}
                   ></i>
                 </p>
@@ -168,37 +190,20 @@ function Prodotto() {
             <p className="aggiungi-al-carrello"> Aggiungi al carrello</p>
             <p className="cuore-dettagli">
               {" "}
-              <i ref={ref} class="bi bi-heart"></i>
+              <i ref={ref} className="bi bi-heart"></i>
             </p>
           </div>
         </div>
-        
       </div>
 
       <p className="descr-prod">
-        Abbiamo calcolato che ogni cinque secondi viene venduta una libreria
-        BILLY in qualche parte del mondo: un grande risultato considerando che è
+        Abbiamo calcolato che ogni cinque secondi viene venduta una libreria 
+         {" " +libreria.nome} in qualche parte del mondo: un grande risultato considerando che è
         stata lanciata nel 1979! Molto amata dai lettori, è un classico che non
         passa mai di moda.
       </p>
 
-      <div className="row bord-el" id="carousel">
-        {LibrerieDB.map((l) => {
-          return (
-            <div className="el" onClick={() => window.location.reload()}>
-              <Element
-                id={l.id}
-                titolo={l.nome}
-                img={l.img}
-                prezzo={l.prezzo}
-                descrizione={l.descrizione}
-                disponibile={l.disponibile}
-              />
-            </div>
-          );
-        })}
-      </div>
-
+     
       <div className="img-desc-prod">
         <div
           className="img-img-desc"
@@ -279,11 +284,11 @@ function Prodotto() {
               <p>
                 "Quando mi fu affidato il compito di progettare una soluzione
                 semplice, funzionale e intelligente per organizzare i libri non
-                immaginavo che la libreria BILLY avrebbe arredato così tante
+                immaginavo che la libreria {" " +libreria.nome} avrebbe arredato così tante
                 case in tutto il mondo. Ricordo che ero orgoglioso soprattutto
                 dei ripiani regolabili e della loro profondità, perfetta per i
                 libri. Ho anche avuto per primo l’idea di trasportare la
-                libreria in un pacco piatto. BILLY continua ad essere una delle
+                libreria in un pacco piatto. {" " +libreria.nome} continua ad essere una delle
                 mie preferite e spero che il suo successo prosegua ancora per
                 molti anni." Gillis Lundgren (1929-2016), designer
               </p>
